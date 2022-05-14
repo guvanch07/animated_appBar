@@ -8,15 +8,17 @@ class CardHelper extends StatelessWidget {
     required this.child,
     required this.height,
     required this.width,
+    this.padding,
   }) : super(key: key);
   final Widget child;
   final double height;
   final double width;
+  final double? padding;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: EdgeInsets.all(padding ?? 10),
       height: height,
       width: width,
       child: child,

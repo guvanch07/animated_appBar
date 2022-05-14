@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
-
+import 'package:flutter/material.dart';
+import 'package:badges/badges.dart';
 import 'package:test_appbar_animation/presentation/core/theme/theme.dart';
 import 'package:test_appbar_animation/presentation/screens/my_avaibility/ui/main_scr_of_avaibility.dart';
 import 'package:test_appbar_animation/presentation/screens/second/second.dart';
@@ -18,15 +19,18 @@ class MyHomePage extends StatelessWidget {
             backgroundColor: AppColors.cardDark,
             activeColor: AppColors.accent,
             iconSize: 25,
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.flame_fill),
+            items: [
+              const BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.home),
+              ),
+              const BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.line_horizontal_3),
               ),
               BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.globe),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.star_fill),
+                icon: Badge(
+                    badgeContent:
+                        const Text('2', style: TextStyle(color: Colors.white)),
+                    child: const Icon(CupertinoIcons.bell)),
               ),
             ]),
         tabBuilder: (BuildContext context, int index) {

@@ -4,11 +4,14 @@ abstract class AppColors {
   static const accent = Colors.white;
   static const textMain = Colors.black;
   static const cardDark = Colors.black;
-
+  static const textUnSelec = Color(0xff656565);
   static const cardWhite = Color(0xFFF0F2F5);
   static const activeColor = Color(0xFF87C6F5);
   static const textUnselected = Colors.white54;
-  static const iconColor = Color(0xff454C66);
+  static const iconColor = Colors.black;
+  static const gradien1 = [Color(0xff3465C3), Color(0xff5785DE)];
+  static const gradien2 = [Color(0xffEC4E27), Color(0xffF47E61)];
+  static const gradien3 = [Color(0xff6B34C3), Color(0xff8E5EDB)];
 }
 
 abstract class _DarkColors {

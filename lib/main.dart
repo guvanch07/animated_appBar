@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:test_appbar_animation/di/dep_injection.dart';
 import 'package:test_appbar_animation/presentation/screens/home/home.dart';
-import 'package:test_appbar_animation/presentation/screens/my_avaibility/bloc/animation_bloc.dart';
 
 void main() async {
   await injectDataModule();
@@ -14,15 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: ((context) => AnimationBloc()),
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const MyHomePage(),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: const MyHomePage(),
     );
   }
 }

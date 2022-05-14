@@ -47,7 +47,7 @@ class _WeekContainerItem extends StatelessWidget {
                   sort.today ?? '',
                   style: Style.headline3.copyWith(color: Colors.white38),
                 )
-              : const SizedBox(),
+              : const SizedBox.shrink(),
           Text(
             sort.weekDay,
             style: Style.headline3.copyWith(color: Colors.white),
@@ -67,31 +67,8 @@ class _WeekContainerItem extends StatelessWidget {
                   decoration:
                       BoxDecoration(color: sort.color, shape: BoxShape.circle),
                 )
-              : const SizedBox()
+              : const SizedBox.shrink()
         ],
-      ),
-    );
-  }
-}
-
-class _MiniWeekScrollWidget extends StatelessWidget {
-  const _MiniWeekScrollWidget({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 50,
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        itemCount: SortType.getSortTypes.length,
-        itemBuilder: (context, index) {
-          return _WeekContainerItem(sort: SortType.getSortTypes[index]);
-        },
-        separatorBuilder: (BuildContext context, int index) {
-          return const SizedBox(width: 10);
-        },
       ),
     );
   }

@@ -3,14 +3,19 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:test_appbar_animation/domain/models/week_sorter.dart';
+import 'package:test_appbar_animation/presentation/core/helpers/image_path.dart';
 import 'package:test_appbar_animation/presentation/core/theme/text_style.dart';
 import 'package:test_appbar_animation/presentation/core/theme/theme.dart';
 import 'package:test_appbar_animation/presentation/widgets/card_helper.dart';
+import 'package:test_appbar_animation/presentation/widgets/colorful_container.dart';
+import 'package:test_appbar_animation/presentation/widgets/produntion_card_helper.dart';
 
 part 'production_section.dart';
 part 'profile_section.dart';
 part 'week_selector.dart';
 part 'stack_list_widget.dart';
+part "mini_scrol_item.dart";
+part 'job_offer.dart';
 
 class MyAvaibility extends StatefulWidget {
   const MyAvaibility({Key? key}) : super(key: key);

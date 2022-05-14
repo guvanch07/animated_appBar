@@ -24,12 +24,11 @@ class __StackListWidgetState extends State<_StackListWidget> {
           controller: widget.scrollController,
           children: const [
             _WeekScrollWidget(),
+            SizedBox(height: 20),
             _ProfileSectionList(),
             _ProductionTodaySection(),
-            _ProfileSectionList(),
-            _ProductionTodaySection(),
-            _ProfileSectionList(),
-            _ProductionTodaySection(),
+            _JobOfferSection(),
+            _StartedPostSection(),
           ],
         ),
         Container(
