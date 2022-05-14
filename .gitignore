@@ -47,5 +47,5 @@ app.*.map.json
 
 windows/
 web/
-pubspec.yaml/
-.metadata/
+pubspec.yaml
+.metadata
