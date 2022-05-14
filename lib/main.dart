@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test_appbar_animation/di/dep_injection.dart';
 import 'package:test_appbar_animation/presentation/screens/home/home.dart';
 
 void main() async {
-  await injectDataModule();
   runApp(const MyApp());
 }
 
