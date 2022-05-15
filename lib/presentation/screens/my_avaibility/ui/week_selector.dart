@@ -43,10 +43,7 @@ class _WeekContainerItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text(
-            sort.today ?? "emty",
-            style: Style.headline3.copyWith(color: Colors.white38),
-          ),
+          _mapper.textWidgetHandler(sort),
           Text(
             sort.weekDay,
             style: Style.headline3.copyWith(color: Colors.white),
@@ -63,6 +60,7 @@ class _WeekContainerItem extends StatelessWidget {
               ? Container(
                   height: 9,
                   width: 9,
+                  margin: const EdgeInsets.symmetric(vertical: 3),
                   decoration: BoxDecoration(
                       color: _mapper.colorHandler(sort),
                       shape: BoxShape.circle),

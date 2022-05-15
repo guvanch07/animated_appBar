@@ -44,7 +44,7 @@ class _MiniWeekContainerItem extends StatelessWidget {
         children: [
           Row(children: [
             sort.isColor
-                ? Text(sort.today ?? '',
+                ? Text(sort.today,
                     style: Style.headline3
                         .copyWith(fontSize: 10, color: Colors.white38))
                 : const SizedBox.shrink(),

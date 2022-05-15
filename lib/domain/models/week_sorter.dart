@@ -1,6 +1,6 @@
 class SortType {
   SortType({
-    this.today,
+    required this.today,
     required this.weekDay,
     required this.month,
     required this.day,
@@ -8,7 +8,7 @@ class SortType {
     required this.isColor,
   });
 
-  final String? today;
+  final String today;
   final String weekDay;
   final String month;
   final int day;
@@ -42,14 +42,14 @@ class SortType {
         month: "wen",
         color: "blue",
         today: "",
-        isColor: false,
+        isColor: true,
         weekDay: 'mon'),
     SortType(
         day: 4,
         month: "jan",
         color: "red",
         today: "",
-        isColor: true,
+        isColor: false,
         weekDay: 'sun'),
     SortType(
         day: 5,
