@@ -45,23 +45,30 @@ class _MiniWeekContainerItem extends StatelessWidget {
           Row(children: [
             sort.isColor
                 ? Text(sort.today ?? '',
-                    style: Style.headline3.copyWith(color: Colors.white38))
+                    style: Style.headline3
+                        .copyWith(fontSize: 10, color: Colors.white38))
                 : const SizedBox.shrink(),
+            const SizedBox(width: 3),
             Text(sort.weekDay,
-                style: Style.headline3.copyWith(color: Colors.white))
+                style:
+                    Style.headline3.copyWith(fontSize: 10, color: Colors.white))
           ]),
           Row(
             children: [
               sort.isColor
                   ? Container(
-                      height: 10,
-                      width: 10,
+                      height: 8,
+                      width: 8,
                       decoration: BoxDecoration(
-                          color: sort.color, shape: BoxShape.circle),
+                          color: _mapper.colorHandler(sort),
+                          shape: BoxShape.circle),
                     )
                   : const SizedBox.shrink(),
+              const SizedBox(width: 3),
               Text(sort.day.toString(),
-                  style: Style.headlineDays.copyWith(color: Colors.white)),
+                  style: Style.headlineDays
+                      .copyWith(fontSize: 10, color: Colors.white)),
+              const SizedBox(width: 3),
               Text(sort.month,
                   style: Style.headline3
                       .copyWith(fontSize: 10, color: Colors.white)),

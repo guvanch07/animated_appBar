@@ -44,7 +44,7 @@ class _StartedPostSection extends StatelessWidget {
           "Posts that are extra relevant to you can be marked with a star and will be shown here for easy access.",
           style: Style.headline2.copyWith(fontWeight: FontWeight.w400)),
       title: "Today s productions",
-      maintitle: "All of your today\’s productions will be displayed here.",
+      maintitle: "All of your today’s productions will be displayed here.",
       path: ImagePath.star,
       isWidgetExist: false,
     );

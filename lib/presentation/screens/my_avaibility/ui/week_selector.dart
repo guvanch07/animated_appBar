@@ -8,7 +8,7 @@ class _WeekScrollWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 111,
+      height: 110,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: SortType.getSortTypes.length,
@@ -33,7 +33,8 @@ class _WeekContainerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      margin: EdgeInsets.symmetric(vertical: _mapper.marginHandler(sort)),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       width: 62,
       decoration: BoxDecoration(
         color: AppColors.cardDark,
@@ -42,12 +43,10 @@ class _WeekContainerItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          sort.isColor
-              ? Text(
-                  sort.today ?? '',
-                  style: Style.headline3.copyWith(color: Colors.white38),
-                )
-              : const SizedBox.shrink(),
+          Text(
+            sort.today ?? "emty",
+            style: Style.headline3.copyWith(color: Colors.white38),
+          ),
           Text(
             sort.weekDay,
             style: Style.headline3.copyWith(color: Colors.white),
@@ -62,10 +61,11 @@ class _WeekContainerItem extends StatelessWidget {
           ),
           sort.isColor
               ? Container(
-                  height: 10,
-                  width: 10,
-                  decoration:
-                      BoxDecoration(color: sort.color, shape: BoxShape.circle),
+                  height: 9,
+                  width: 9,
+                  decoration: BoxDecoration(
+                      color: _mapper.colorHandler(sort),
+                      shape: BoxShape.circle),
                 )
               : const SizedBox.shrink()
         ],

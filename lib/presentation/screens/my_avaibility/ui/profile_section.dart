@@ -35,22 +35,21 @@ class _ProfileSection extends StatelessWidget {
           const Text(
               "Complete your profile tooptimize your exposure in job searches.",
               style: Style.headline1),
-          // LinearPercentIndicator(
-          //   width: 250.0,
-          //   lineHeight: 6.0,
-          //   percent: 0.7,
-          //   backgroundColor: AppColors.activeColor,
-          //   progressColor: AppColors.accent,
-          //   barRadius: const Radius.circular(2),
-          // ),
+          GFProgressBar(
+            percentage: 0.7,
+            lineHeight: 9,
+            alignment: MainAxisAlignment.spaceBetween,
+            backgroundColor: Colors.white,
+            progressBarColor: AppColors.activeColor,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: const [
+            children: [
               Text(
                 "Complete profile",
-                style: Style.headline2,
+                style: Style.headline2.copyWith(fontSize: 14),
               ),
-              Icon(
+              const Icon(
                 Icons.arrow_forward_ios,
                 size: 14,
               )
