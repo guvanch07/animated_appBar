@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:getwidget/getwidget.dart';
@@ -75,7 +77,13 @@ class _MyAvaibilityState extends State<MyAvaibility>
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(200, 255, 255, 255),
+        flexibleSpace: ClipRRect(
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 7, sigmaY: 7),
+            child: Container(color: Colors.transparent),
+          ),
+        ),
+        backgroundColor: Colors.white.withAlpha(200),
         elevation: 0,
         centerTitle: false,
         title: const Text("My Availibilty", style: Style.headline1),

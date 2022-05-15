@@ -10,7 +10,7 @@ class _ProductionTodaySection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
-          Text("Today\’s productions", style: Style.headline1),
+          Text("Today’s productions", style: Style.headline1),
           SizedBox(height: 10),
           _ProductionTextWidget(
               path: ImagePath.image1,
@@ -64,7 +64,7 @@ class _ProductionTextWidget extends StatelessWidget {
             ),
           ),
           const Icon(Icons.arrow_forward_ios, size: 12),
-          const SizedBox(width: 5),
+          const SizedBox(width: 10),
         ],
       ),
     );
