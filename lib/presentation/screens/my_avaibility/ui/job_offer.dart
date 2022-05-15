@@ -6,10 +6,9 @@ class _JobOfferSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ReUsebleProductionWidget(
-      title: "Today s productions",
+      title: "My job offers",
       maintitle: "All of your today’s productions will be displayed here.",
       path: ImagePath.offer,
-      isWidgetExist: false,
       height: 100,
       widget: Column(
         children: [
@@ -46,7 +45,6 @@ class _StartedPostSection extends StatelessWidget {
       title: "Today s productions",
       maintitle: "All of your today’s productions will be displayed here.",
       path: ImagePath.star,
-      isWidgetExist: false,
     );
   }
 }

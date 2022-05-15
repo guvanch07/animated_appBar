@@ -27,6 +27,7 @@ class __StackListWidgetState extends State<_StackListWidget> {
             SizedBox(height: 20),
             _ProfileSectionList(),
             _ProductionTodaySection(),
+            _CvNetwork(),
             _JobOfferSection(),
             _StartedPostSection(),
           ],

@@ -12,7 +12,6 @@ class ReUsebleProductionWidget extends StatelessWidget {
     required this.path,
     required this.widget,
     this.whichWidgetExist,
-    required this.isWidgetExist,
     this.height,
   }) : super(key: key);
   final String title;
@@ -20,7 +19,6 @@ class ReUsebleProductionWidget extends StatelessWidget {
   final String path;
   final Widget widget;
   final Widget? whichWidgetExist;
-  final bool isWidgetExist;
   final double? height;
 
   @override
@@ -43,12 +41,6 @@ class ReUsebleProductionWidget extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: isWidgetExist ? 20 : 0,
-          ),
-          isWidgetExist
-              ? whichWidgetExist ?? const SizedBox()
-              : const SizedBox()
         ],
       ),
     );
