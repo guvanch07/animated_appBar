@@ -38,7 +38,7 @@ class _WeekContainerItem extends StatelessWidget {
       width: 62,
       decoration: BoxDecoration(
         color: AppColors.cardDark,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(4),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

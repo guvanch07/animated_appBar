@@ -34,10 +34,10 @@ class _MiniWeekContainerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      height: 50,
+      height: 36,
       decoration: BoxDecoration(
         color: AppColors.cardDark,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(4),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

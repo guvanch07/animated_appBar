@@ -76,17 +76,20 @@ class _MyAvaibilityState extends State<MyAvaibility>
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        flexibleSpace: ClipRRect(
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 7, sigmaY: 7),
-            child: Container(color: Colors.transparent),
-          ),
-        ),
-        backgroundColor: Colors.white.withAlpha(200),
-        elevation: 0,
-        centerTitle: false,
-        title: const Text("My Availibilty", style: Style.headline1),
+      appBar: PreferredSize(
+        child: ClipRRect(
+            child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
+                child: Container(
+                  padding: const EdgeInsets.all(15),
+                  alignment: Alignment.bottomLeft,
+                  child: const Text("My Avaibility",
+                      style: Style.headline1, textAlign: TextAlign.center),
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.2,
+                  color: Colors.white.withAlpha(200),
+                ))),
+        preferredSize: Size(MediaQuery.of(context).size.width, 50),
       ),
       body: _StackListWidget(
         scrollController: _scrollController,
