@@ -86,10 +86,10 @@ class _MyAvaibilityState extends State<MyAvaibility>
                   child: const Text("My Avaibility",
                       style: Style.headline1, textAlign: TextAlign.center),
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.2,
+                  height: MediaQuery.of(context).size.height,
                   color: Colors.white.withAlpha(200),
                 ))),
-        preferredSize: Size(MediaQuery.of(context).size.width, 50),
+        preferredSize: Size(MediaQuery.of(context).size.width, 60),
       ),
       body: _StackListWidget(
         scrollController: _scrollController,
